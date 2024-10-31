@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <link rel="stylesheet" href="./styles/formulario.css"/>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Create Account</h2>
+        </div>
+        <div class="body">
+            <form action="RegistroUsuario" method="POST">
+
+
+                <div class="row">
+                    <div class="col">
+                        <label for="fistname">First name</label>
+                        <input type="text" id="fistname" name="fistname" placeholder="enter your first name" required>
+                    </div>
+                    <div class="col">
+                        <label for="lastname">Last Name</label>
+                        <input type="text" id="lastname" name="lastname" placeholder="enter your last name" required>
+                    </div>
+                </div>
+
+                <div class="row full-width">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="enter your email">
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="enter your password">
+                    </div>
+                    <div class="col">
+                        <label for="confirmPassword">Confirm Password</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="enter your password again">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <label>Gender:</label>
+                        <div class="radio-group">
+                            <input type="radio" id="male" name="gender" value="male">
+                            <label class="label-radio-check" for="masculino">Male</label>
+                            <input type="radio" id="female" name="gender" value="female">
+                            <label class="label-radio-check" for="femenino">Female</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <label>Hobbies</label>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="music" name="hobbies" value="music">
+                            <label class="label-radio-check" for="music">Music</label>
+                            <input type="checkbox" id="sports" name="hobbies" value="sports">
+                            <label class="label-radio-check" for="sports">Sports</label>
+                            <input type="checkbox" id="travel" name="hobbies" value="travel">
+                            <label class="label-radio-check" for="travel">Travel</label>
+                            <input type="checkbox" id="movies" name="hobbies" value="movies">
+                            <label class="label-radio-check" for="movies">Movies</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row"> 
+                    <div class="col"> 
+                        <label for="occupation">Source of Income</label> 
+                        <select id="occupation" name="occupation"> 
+                            <option value="employed">Employed</option> 
+                            <option value="unemployed">Unemployed</option> 
+                        </select> </div> <div class="col"> 
+                            <label for="income">Income</label> 
+                            <input type="range" id="income" name="income" min="0" max="20"> 
+                        </div> 
+                    </div> 
+                    <div class="row"> 
+                        <div class="col"> 
+                            <label for="archivo">Upload Profile Picture</label> 
+                            <input type="file" id="archivo" name="archivo"> 
+                        </div> 
+                        <div class="col"> 
+                            <label for="age">Age</label> 
+                            <input type="number" id="age" name="age" min="0"> 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row full-width">
+                    <label for="bio">Bio</label>
+                    <textarea id="bio" name="bio"></textarea>
+                </div>
+
+                <div class="row submit-row">
+                    <input type="submit" value="Create">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
