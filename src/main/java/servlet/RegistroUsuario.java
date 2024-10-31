@@ -74,6 +74,8 @@ public class RegistroUsuario extends HttpServlet {
             }
         }
 
+        String contrasena = request.getParameter("password");
+        String confirmarContrasena = request.getParameter("confirmPassword");
         String puesto = request.getParameter("occupation");
         String ingreso = request.getParameter("income");
         String edad = request.getParameter("age");
@@ -106,6 +108,9 @@ public class RegistroUsuario extends HttpServlet {
             valido = false;
         }
         if (!foto.endsWith(".jpg") && !foto.endsWith(".png")) {
+            valido = false;
+        }
+        if (!(contrasena.equals(confirmarContrasena))) {
             valido = false;
         }
         
